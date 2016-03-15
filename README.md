@@ -1,3 +1,11 @@
+# Gooten API Clients CodeGen
+
+ How to:
+ 1. Clone repo
+ 2. Run ```./bin/gooten-scripts/client-libs-gen.sh http://qa-api.print.io/docs/api.json``` to generate client libs from qa-api swagger doc
+ 3. Go to ```/output/clients``` to find generated libs
+
+
 # Swagger Code Generator
 
 [![Build Status](https://travis-ci.org/swagger-api/swagger-codegen.svg)](https://travis-ci.org/swagger-api/swagger-codegen)
@@ -640,7 +648,7 @@ You must register this class into your JAX-RS configuration file:
 ```xml
          <jaxrs:resourceComparator>
    			<bean class="your.package.CXFInterfaceComparator"/>
-		</jaxrs:resourceComparator> 
+		</jaxrs:resourceComparator>
 ```
 
 This is no longer necessary if you are using CXF >=v3.x
@@ -692,7 +700,7 @@ You can use the [swagger-codegen-maven-plugin](modules/swagger-codegen-maven-plu
 To push the auto-generated SDK to GitHub, we provide `git_push.sh` to streamline the process. For example:
 
  1) Create a new repository in GitHub (Ref: https://help.github.com/articles/creating-a-new-repository/)
- 
+
  2) Generate the SDK
 ```
  java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
@@ -742,7 +750,7 @@ Here are some companies/projects using Swagger Codegen in production. To add you
 - [OSDN](https://osdn.jp)
 - [Pixoneye](http://www.pixoneye.com/)
 - [PostAffiliatePro](https://www.postaffiliatepro.com/)
-- [Reload! A/S](https://reload.dk/) 
+- [Reload! A/S](https://reload.dk/)
 - [Royal Bank of Canada (RBC)](http://www.rbc.com/canada.html)
 - [SmartRecruiters](https://www.smartrecruiters.com/)
 - [StyleRecipe](http://stylerecipe.co.jp)
