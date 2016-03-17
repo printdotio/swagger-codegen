@@ -1,3 +1,5 @@
+# See ```gooten_templates``` branch.
+
 # Swagger Code Generator
 
 [![Build Status](https://travis-ci.org/swagger-api/swagger-codegen.svg)](https://travis-ci.org/swagger-api/swagger-codegen)
