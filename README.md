@@ -6,9 +6,12 @@
  3. Go to ```/output/clients``` to find generated libs
 
 All language specific configs stored in ```./bin/gooten-scripts/configs``` folder.
-In order to change namespaces or package names or source folder you need to get available options for {lang}config.JSON file.
+
+In order to change namespaces or package names or source folder you need to get available options for ```{lang}config.JSON``` file.
+
 Run ```java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar config-help -l java```
 It will output:
+
 ```
 CONFIG OPTIONS
     modelPackage
@@ -52,17 +55,17 @@ CONFIG OPTIONS
 ```
 
 Your config file for Java can look like
-
+```
 {
   "groupId":"com.my.company",
   "artifactId":"MyClient",
   "artifactVersion":"1.2.0",
   "library":"feign"
 }
+```
 
 After you made changes in templates or generators files, code gen binaries should be rebuild.
-```./bin/gooten-scripts/client-libs-gen.sh```
-will automatically rebuild binaries for you.
+```./bin/gooten-scripts/client-libs-gen.sh``` will automatically rebuild binaries for you.
 
 # Swagger Code Generator
 
