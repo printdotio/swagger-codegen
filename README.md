@@ -5,7 +5,8 @@
  2. Run ```./bin/gooten-scripts/client-libs-gen.sh http://qa-api.print.io/docs/api.json``` to generate client libs from qa-api swagger doc
  3. Go to ```/output/clients``` to find generated libs
 
-In order to edit generator you need to get available options to put in config.JSON
+All language specific configs stored in ```./bin/gooten-scripts/configs``` folder.
+In order to change namespaces or package names or source folder you need to get available options for {lang}config.JSON file.
 Run ```java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar config-help -l java```
 It will output:
 ```

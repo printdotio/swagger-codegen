@@ -1,0 +1,9 @@
+{
+  "groupId":"com.gooten",
+  "artifactId":"Gooten-API-Client",
+  "artifactVersion":"1.0.0",
+  "modelPackage": "gooten.api.model",
+  "apiPackage": "gooten.api",
+  "invokerPackage": "gooten.api.client",
+  "library":"feign"
+}

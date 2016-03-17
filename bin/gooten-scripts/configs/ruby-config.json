@@ -1,0 +1,9 @@
+{
+  "gemName":"gooten_api_client",
+  "moduleName":"GootenApiClient",
+  "gemVersion":"1.0.0",
+  "gemHomepage":"gooten.com",
+  "gemSummary":"Gooten API Client Library",
+  "gemAuthor":"Gooten",
+  "gemAuthorEmail":"hello@gooten.com"
+}

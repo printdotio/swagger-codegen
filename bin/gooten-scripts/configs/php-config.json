@@ -1,0 +1,6 @@
+{
+  "modelPackage": "gooten.api.model",
+  "apiPackage": "gooten.api",
+  "invokerPackage": "gooten.api.client",
+  "artifactVersion":"1.0.0"
+}
