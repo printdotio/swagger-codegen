@@ -30,6 +30,13 @@ fi
 # if you've executed sbt assembly previously it will use that instead.
 export JAVA_OPTS="${JAVA_OPTS} -XX:MaxPermSize=256M -Xmx1024M -DloggerPath=conf/log4j.properties"
 
+# clean and rebuild code-gen-cli
+rm $executable
+mvn package
+
+# clean output folder
+rm -rf ./output/
+
 java $JAVA_OPTS -jar $executable generate -i $SWAGGER_API -l csharp -o ./output/clients/CSharp/Gooten.API.CSharpClient
 java $JAVA_OPTS -jar $executable generate -i $SWAGGER_API -l java -o ./output/clients/Java/Gooten.API.JavaClient
 java $JAVA_OPTS -jar $executable generate -i $SWAGGER_API -l clojure -o ./output/clients/Clojure/gooten-api-clojure-client

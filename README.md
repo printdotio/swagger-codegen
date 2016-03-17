@@ -1,10 +1,67 @@
 # Gooten API Clients CodeGen
 
- How to:
+ How to generate client libraries:
  1. Clone repo
  2. Run ```./bin/gooten-scripts/client-libs-gen.sh http://qa-api.print.io/docs/api.json``` to generate client libs from qa-api swagger doc
  3. Go to ```/output/clients``` to find generated libs
 
+In order to edit generator you need to get available options to put in config.JSON
+Run ```java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar config-help -l java```
+It will output:
+```
+CONFIG OPTIONS
+    modelPackage
+        package for generated models
+
+    apiPackage
+        package for generated api classes
+
+    sortParamsByRequiredFlag
+        Sort method arguments to place required parameters before optional parameters. Default: true
+
+    invokerPackage
+        root package for generated code
+
+    groupId
+        groupId in generated pom.xml
+
+    artifactId
+        artifactId in generated pom.xml
+
+    artifactVersion
+        artifact version in generated pom.xml
+
+    sourceFolder
+        source folder for generated code
+
+    localVariablePrefix
+        prefix for generated code members and local variables
+
+    serializableModel
+        boolean - toggle "implements Serializable" for generated models
+
+    library
+        library template (sub-template) to use:
+        <default> - HTTP client: Jersey client 1.18. JSON processing: Jackson 2.4.2
+        jersey2 - HTTP client: Jersey client 2.6
+        feign - HTTP client: Netflix Feign 8.1.1.  JSON processing: Jackson 2.6.3
+        okhttp-gson - HTTP client: OkHttp 2.4.0. JSON processing: Gson 2.3.1
+        retrofit - HTTP client: OkHttp 2.4.0. JSON processing: Gson 2.3.1 (Retrofit 1.9.0)
+        retrofit2 - HTTP client: OkHttp 2.5.0. JSON processing: Gson 2.4 (Retrofit 2.0.0-beta2)
+```
+
+Your config file for Java can look like
+
+{
+  "groupId":"com.my.company",
+  "artifactId":"MyClient",
+  "artifactVersion":"1.2.0",
+  "library":"feign"
+}
+
+After you made changes in templates or generators files, code gen binaries should be rebuild.
+```./bin/gooten-scripts/client-libs-gen.sh```
+will automatically rebuild binaries for you.
 
 # Swagger Code Generator
 
