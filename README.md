@@ -2,7 +2,9 @@
 
  How to generate client libraries:
  1. Clone repo
- 2. Run ```./bin/gooten-scripts/client-libs-gen.sh http://qa-api.print.io/docs/api.json``` to generate client libs from qa-api swagger doc
+ 2. Run ```./bin/gooten-scripts/client-libs-gen.sh http://qa-api.print.io/docs/api.json``` to generate client libs from qa-api swagger doc.
+
+ In order to generate ```git_push.sh``` automatically - run ```./bin/gooten-scripts/client-libs-gen.sh http://qa-api.print.io/docs/api.json git_user_name commit_message```
  3. Go to ```/output/clients``` to find generated libs
 
 All language specific configs stored in ```./bin/gooten-scripts/configs``` folder.
