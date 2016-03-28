@@ -37,7 +37,7 @@ mvn package
 # clean output folder
 rm -rf /c/api-client-libs/generated/
 
-cp ./client-libs-push.sh /c/api-client-libs/ -R
+cp ./bin/gooten-scripts/client-libs-push.sh /c/api-client-libs/ -R
 
 java $JAVA_OPTS -jar $executable generate -i $SWAGGER_API -l csharp --git-repo-id "gooten-api-csharp-client" --git-user-id "$2" --release-note "$3" -o /c/api-client-libs/generated/CSharp/Gooten.API.CSharpClient -c ./bin/gooten-scripts/configs/csharp-config.json
 java $JAVA_OPTS -jar $executable generate -i $SWAGGER_API -l java --git-repo-id "gooten-api-java-client" --git-user-id "$2" --release-note "$3" -o /c/api-client-libs/generated/Java/Gooten.API.JavaClient -c ./bin/gooten-scripts/configs/java-config.json
